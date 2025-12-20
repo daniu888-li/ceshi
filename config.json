@@ -17,4 +17,9 @@
   ],
   "version": 1,
   "update_time": "2025-01-19T12:00:00Z"
+    "config_sources": [
+    "https://备用服务器1.com/config.json",
+    "https://gitee.com/user/repo/raw/master/config.json",
+    "https://备用服务器2.com/config.php"
+  ]
 }
