@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>591代购 - APP下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+            padding-bottom: 40px;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 0 30px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+            border-radius: 24px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            box-shadow: 0 10px 40px rgba(233, 69, 96, 0.4);
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .download-section {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .section-title {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 18px 24px;
+            background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 600;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .download-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .download-btn .icon {
+            margin-right: 8px;
+        }
+        
+        .android-btn {
+            background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+            margin-top: 12px;
+        }
+        
+        .steps {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .steps-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .steps-title .icon {
+            margin-right: 8px;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+        
+        .step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step-number {
+            width: 28px;
+            height: 28px;
+            background: rgba(233, 69, 96, 0.2);
+            color: #e94560;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 3px;
+        }
+        
+        .step-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .step-text strong {
+            color: #fff;
+        }
+        
+        .step-text .highlight {
+            color: #e94560;
+            font-weight: 600;
+        }
+        
+        .notice {
+            background: rgba(255, 193, 7, 0.15);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .notice-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffc107;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .notice-title .icon {
+            margin-right: 6px;
+        }
+        
+        .notice-text {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+        }
+        
+        .faq {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+        }
+        
+        .faq-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .faq-item {
+            margin-bottom: 16px;
+        }
+        
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .faq-q {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e94560;
+            margin-bottom: 6px;
+        }
+        
+        .faq-a {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0 20px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        /* Safari 检测提示 */
+        .safari-warning {
+            display: none;
+            background: rgba(255, 59, 48, 0.2);
+            border: 1px solid rgba(255, 59, 48, 0.4);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .safari-warning.show {
+            display: block;
+        }
+        
+        .safari-warning-text {
+            font-size: 14px;
+            color: #ff6b6b;
+            font-weight: 500;
+        }
+        
+        /* 非 iOS 设备提示 */
+        .platform-notice {
+            display: none;
+            background: rgba(100, 100, 255, 0.15);
+            border: 1px solid rgba(100, 100, 255, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .platform-notice.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🛒</div>
+            <h1>591代购</h1>
+            <p class="subtitle">便捷购物，尽在掌握</p>
+        </div>
+        
+        <!-- Safari 警告 -->
+        <div class="safari-warning" id="safariWarning">
+            <p class="safari-warning-text">⚠️ 请使用 Safari 浏览器打开此页面进行安装</p>
+        </div>
+        
+        <!-- 非 iOS 提示 -->
+        <div class="platform-notice" id="platformNotice">
+            <p style="color: rgba(255,255,255,0.8);">📱 检测到您使用的是非 iOS 设备，请下载 Android 版本</p>
+        </div>
+        
+        <!-- 下载区域 -->
+        <div class="download-section">
+            <p class="section-title">📲 下载安装</p>
+            <a href="app.mobileconfig" class="download-btn" id="iosDownloadBtn">
+                <span class="icon">🍎</span> 下载 iOS 版本
+            </a>
+            <a href="https://591daigou.com/app.apk" class="download-btn android-btn" id="androidDownloadBtn">
+                <span class="icon">🤖</span> 下载 Android 版本
+            </a>
+        </div>
+        
+        <!-- 安装步骤 -->
+        <div class="steps">
+            <h3 class="steps-title"><span class="icon">📋</span> iOS 安装步骤</h3>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <p class="step-text">点击上方 <strong>"下载 iOS 版本"</strong> 按钮</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <p class="step-text">弹出提示时点击 <span class="highlight">"允许"</span></p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <p class="step-text">打开 <strong>设置</strong> → 点击 <span class="highlight">"已下载描述文件"</span></p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <p class="step-text">点击右上角 <span class="highlight">"安装"</span>，输入锁屏密码</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <p class="step-text">返回桌面，找到 <strong>591代购</strong> 图标即可使用 🎉</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 注意事项 -->
+        <div class="notice">
+            <p class="notice-title"><span class="icon">⚠️</span> 注意事项</p>
+            <p class="notice-text">
+                • 必须使用 <strong>Safari 浏览器</strong> 打开本页面<br>
+                • 安装时需要输入手机锁屏密码<br>
+                • 安装完成后桌面会出现APP图标
+            </p>
+        </div>
+        
+        <!-- 常见问题 -->
+        <div class="faq">
+            <h3 class="faq-title">❓ 常见问题</h3>
+            
+            <div class="faq-item">
+                <p class="faq-q">Q: 点击下载没反应？</p>
+                <p class="faq-a">A: 请确保使用 Safari 浏览器打开本页面，其他浏览器（如微信、Chrome）无法安装。</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-q">Q: 找不到"已下载描述文件"？</p>
+                <p class="faq-a">A: 打开"设置"后，在顶部 Apple ID 下方就能看到。如果没有，请重新点击下载。</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-q">Q: 安装后打不开？</p>
+                <p class="faq-a">A: 请检查网络连接是否正常。如果问题持续，请尝试重新下载安装。</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-q">Q: 如何卸载？</p>
+                <p class="faq-a">A: 长按桌面图标 → 删除。或者去"设置 → 通用 → VPN与设备管理"中删除描述文件。</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 591代购 版权所有</p>
+        </div>
+    </div>
+
+    <script>
+        // 检测是否为 Safari
+        function isSafari() {
+            const ua = navigator.userAgent;
+            return /Safari/.test(ua) && !/Chrome/.test(ua) && !/CriOS/.test(ua) && !/FxiOS/.test(ua);
+        }
+        
+        // 检测是否为 iOS
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+                   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        }
+        
+        // 检测是否为 Android
+        function isAndroid() {
+            return /Android/.test(navigator.userAgent);
+        }
+        
+        // 页面加载时检测
+        document.addEventListener('DOMContentLoaded', function() {
+            const iosBtn = document.getElementById('iosDownloadBtn');
+            const safariWarning = document.getElementById('safariWarning');
+            const platformNotice = document.getElementById('platformNotice');
+            
+            if (isIOS()) {
+                // iOS 设备
+                if (!isSafari()) {
+                    // 不是 Safari，显示警告
+                    safariWarning.classList.add('show');
+                }
+            } else if (isAndroid()) {
+                // Android 设备
+                platformNotice.classList.add('show');
+                platformNotice.querySelector('p').textContent = '📱 检测到您使用的是 Android 设备，请下载 Android 版本';
+            } else {
+                // 其他设备（电脑等）
+                platformNotice.classList.add('show');
+                platformNotice.querySelector('p').textContent = '💻 请使用手机访问此页面下载APP';
+            }
+            
+            // iOS 下载按钮点击事件
+            iosBtn.addEventListener('click', function(e) {
+                if (isIOS() && !isSafari()) {
+                    e.preventDefault();
+                    alert('请使用 Safari 浏览器打开此页面进行安装！\n\n复制当前网址，在 Safari 中打开。');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
